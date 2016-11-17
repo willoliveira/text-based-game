@@ -3,12 +3,11 @@ using System.Collections;
 
 public class DialogueOptions {
 	
-	protected string LabelText;
 	protected string NextNode;
 
-	public string labelText
+	public DialogueOptions(string nextNode)
 	{
-		get { return LabelText; }
+		this.NextNode = nextNode;
 	}
 
 	public string nextNode

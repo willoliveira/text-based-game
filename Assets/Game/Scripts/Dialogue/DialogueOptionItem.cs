@@ -3,17 +3,16 @@ using System.Collections;
 
 public class DialogueOptionItem : DialogueOptions
 {
-	private string[] OptionsText;
+	private string Text;
 
-	public DialogueOptionItem(string labelText, string nextNode, string[] optionsText)
+	public DialogueOptionItem(string nextNode, string text)
+		: base(nextNode)
 	{
-		this.LabelText = labelText;
-		this.NextNode = nextNode;
-		this.OptionsText = optionsText;
+		this.Text = text;
 	}
 
-	public string[] optionsText
+	public string text
 	{
-		get { return OptionsText; }
+		get { return Text; }
 	}
 }

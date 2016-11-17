@@ -3,16 +3,15 @@ using System.Collections;
 
 public class DialogueActionItem: DialogueOptions
 {
-	private string[] ActionsText;
+	private string ActionsText;
 
-	public DialogueActionItem(string labelText, string nextNode, string[] actionsText)
+	public DialogueActionItem(string nextNode, string actionsText) 
+		: base(nextNode)
 	{
-		this.LabelText = labelText;
-		this.NextNode = nextNode;
 		this.ActionsText = actionsText;
 	}
 
-	public string[] actionsText
+	public string actionsText
 	{
 		get { return ActionsText; }
 	}

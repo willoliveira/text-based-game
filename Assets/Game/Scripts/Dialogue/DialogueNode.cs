@@ -3,31 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class DialogueNode
-{
-	
-
-	private string Name;
-	private int Id;
+{	
+	private string Id;
+	private string Enunciation;
 	private List<DialogueOptions> DialogueListItems;
 
-	public DialogueNode(int id, string name)
+	public DialogueNode(string id, string enunciation)
 	{
 		this.Id = id;
-		this.Name = name;
+		this.Enunciation = enunciation;
+
+		DialogueListItems = new List<DialogueOptions>();
 	}
 
-	public string name
+	public string enunciation
 	{
-		get { return Name; }
+		get { return Enunciation; }
 	}
 
-	public int id
+	public string id
 	{
 		get { return Id; }
 	}
-	
+
+	public List<DialogueOptions> options
+	{
+		get { return DialogueListItems;  }
+	}
+
+
 	public void AddOption(DialogueOptions option)
 	{
 		DialogueListItems.Add(option);
+	}
+
+	public void AddOptions(DialogueOptions[] option)
+	{
+		
 	}
 }
